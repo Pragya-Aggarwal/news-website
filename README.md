@@ -24,5 +24,3 @@ Fetch: For fetching data from APIs.
 
 Vite: A modern frontend build tool for fast development and builds.
 
-
-link for run the project- 
