@@ -24,5 +24,53 @@ Fetch: For fetching data from APIs.
 
 Vite: A modern frontend build tool for fast development and builds.
 
+Installation
 
-link for run the project- 
+Prerequisites:-
+
+Ensure you have the following installed:
+
+Node.js (version 14 or above)
+
+Yarn
+
+Step to set up the project using git- 
+
+Clone the repository:
+
+git clone https://github.com/Pragya-Aggarwal/news-website.git
+cd news-website
+Install the dependencies:
+
+Using yarn:
+
+yarn install 
+
+Start the development server:
+
+Using yarn:
+
+yarn dev
+
+Open the application in your browser at http://localhost:5173/.
+
+
+Step to set up the project using Zip File-
+ 
+
+Extract the Zip file
+Open that folder in your favourite IDE like VS code or goto inside the folder(news-website) and open CMD to install other dependencies.
+
+Install the dependencies:
+
+Using yarn:
+
+yarn install 
+
+Start the development server:
+
+Using yarn:
+
+yarn dev
+
+Open the application in your browser at http://localhost:5173/.

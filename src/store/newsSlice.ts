@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
 interface NewsState {
   articles: any[];
@@ -12,12 +13,15 @@ const initialState: NewsState = {
 
 export const fetchNews = createAsyncThunk(
   "news/fetchNews",
-  async (category: string) => {
-    const response = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=9730b649a15043bf92e79a0ac99fc6d6`
-    );
-    const data = await response.json();
-    return data.articles;
+  async (category: string, { rejectWithValue }) => {
+    try {
+      const response = await axios.get(
+        `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=9730b649a15043bf92e79a0ac99fc6d6`
+      );
+      return response.data.articles;
+    } catch (error: any) {
+      return rejectWithValue(error.response?.data || "Failed to fetch news");
+    }
   }
 );
 
